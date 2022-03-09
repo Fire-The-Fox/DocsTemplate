@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+@import url(http://fonts.googleapis.com/css?family=Arimo:700,700italic);
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    background: linear-gradient(5deg, rgba(0,54,177,1) 0%, rgba(0,125,255,1) 100%);
+}
+
+.navbar-menu {
+    font-size: 35px;
+    margin-left: 15px;
+    color: white;
+}
+
+.navbar-menu button {
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 3.5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: rgba(0, 0, 0, 0);
+    color: white;
+    transition: all 0.3s;
+}
+
+.navbar-menu button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.navbar-search {
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 77%;
+    color: white;
+}
+
+.navbar-search input {
+    position: relative;
+    bottom: 7px;
+    height: 25px;
+    width: 34%;
+}
+
+.navbar-search button {
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    margin-top: 3.5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: white;
+    transition: all 0.3s;
+}
+
+.navbar-search button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.navbar-title {
+    font-size: 35px;
+    float: right;
+    position: relative;
+    bottom: 82px;
+    padding-right: 15px;
+    color: rgb(233, 233, 233);
+}
+
+.sidebar {
+    direction: rtl;
+    position: fixed;
+    right: 20%;
+    height: calc(100vh - 55px);
+    overflow: auto;
+    width: 20%;
+    background: linear-gradient(5deg, rgba(0,54,177,1) 0%, rgba(0,125,255,1) 100%);
+}
+
+.sidebar ul {
+    direction: ltr;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.sidebar ul li ul {
+    list-style-type: "\2514  ";
+    padding-left: 15px;
+}
+
+.sidebar-start {
+    list-style-type: "\250C  ";
+}
+
+.sidebar-middle {
+    list-style-type: "\251C  ";
+}
+
+.sidebar-end {
+    list-style-type: "\2514  ";
+}
+
+.sidebar-pipe {
+    list-style-type: "\2502  ";
+}
+
+pre, code {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    background-color: #fafafa;
+}
+
+.docs-body {
+    z-index: -1;
+    position: absolute;
+    top: 55px;
+}
