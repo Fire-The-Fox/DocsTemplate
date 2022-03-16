@@ -11,17 +11,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="css/framework.css" />
-    <link rel="stylesheet" href="css/index.css" />
     <title>Home Page</title>
 </head>
 <body>
     <div class="navbar">
-        <div class="navbar-search">
-            <input />
-            <button>
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
 
         <div class="navbar-menu">
             <button  type="button" id="navbar-button">
@@ -36,134 +29,101 @@
 
     <div class="sidebar" id="sidebar">
         <div style="padding-bottom: 25px;"></div>
-        <ul>
-            <li class="sidebar-start">FoxString</li>
-            <li class="sidebar-middle">
-                C
-                <ul>
-                    <li class="sidebar-pipe"></li>
-                    <li>h</li>
-                </ul>
-            </li>
-            <li class="sidebar-pipe"></li>
-            <li class="sidebar-end">
-                C++
-                <ul>
-                    <li class="sidebar-pipe"></li>
-                    <li>
-                        Class FoxString
-                        <ul>
-                            <li class="sidebar-pipe"></li>
-                            <li class="sidebar-middle">
-                                Variables
-                                <ul>
-                                    <li class="sidebar-middle">
-                                        data
-                                    </li>
-                                    <li>
-                                        size
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-pipe"></li>
-                            <li>
-                                Methods
-                                <ul>
-                                    <li class="sidebar-pipe"></li>
-                                    <li class="sidebar-middle">
-                                        New
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Clean
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        ReCreate
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Add
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Count
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Find
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Contains
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Connect
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Pop
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Replace
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Compare
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Capitalize
-                                    </li>
-                                    <li class="sidebar-middle">
-                                        Upper
-                                    </li>
-                                    <li class="sidebar-end">
-                                        Lower
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <a class="sidebar-link" href="index.html">Home</a>
+		<a href="#fileStruct">File Structure</a>
+		<a href="#howToSidebar">How to add things to Sidebar</a>
+		<a href="#docsDiv">Adding parts of documentation</a>
+		<a href="#contact">Contact</a>
+        <a class="sidebar-link" href="template.html">Template</a>
     </div>
 
     <div class="docs-body">
-        <pre>
-#include &lt;stdio.h&gt;
+        <h1 class="center">How to use DocsTemplate?</h1>
+		<pre>
+git clone https://github.com/Fire-The-Fox/DocsTemplate.git
+mv DocsTemplate {name}
+cd {name}
+</pre>
+		<h3>What next?</h3>
+		<p>After you have successfully downloaded the repository, you can now customize the template.</p>
+		<div style="padding-bottom: 25px;"></div>
+		<h3 id="fileStruct">Default file structure</h3>
+		<pre>
+./css
+./css/framework.css
+./css/index.css
+./js
+./js/framework.js
+./index.html
+./template.html
+</pre>
+		<p>Every css file should be stored in the `css` folder and javascript files should be put inside of js folder</p>
+		<p>When you want to create a new page, copy template.html file and give it a specific name of the webpage, template.html is basicaly a blank website with defaults</p>
 
-int main() { 
-    printf("Hello, world!");
-    return 0;
-}</pre>
-        <pre>
-#include &lt;stdio.h&gt;
+		<div style="padding-bottom: 25px;"></div>
+		<h3 id="howToSidebar">How to add things into sidebar?</h3>
+		<p>When you want to split one entire page into smaller sections and make programmer go to that specific section, they just can click on the name of section and website will send them to there</p>
+		<pre>
+&lt;a href="#id"&gt{sectionName}&lt;/a&gt;
+</pre>
+		<p>#id reffers to an id, which you add to the specific element of a part of documentation and {sectionName} to the name of that section you want to be</p>
+		<div style="padding-bottom: 15px;"></div>
+			
+		<p>When you want to add a link to another page of a documentation into the sidebar</p>
+		<pre>
+&lta class="sidebar-link" href="{file.html}"&gt;{pageName}&lt/a&gt;
+</pre>
+		<p>{file.hmtl} represents name of a file of that page and to set name of a page in the sidebar, replace {pageName} with coresponding name</p>
 
-int main() { 
-    printf("Hello, world!");
-    return 0;
-}</pre>
-        <pre>
-#include &lt;stdio.h&gt;
+		<div style="padding-bottom: 35px;"></div>
+		<h2 id="docsDiv">Adding parts of documentation into the page</h2>
+		<div style="padding-bottom: 15px;"></div>
+		<p>Everything you add to the documentation has to be in &ltdiv class="docs-body"&gt element</p>
+		<pre>
+	&ltdiv class="docs-body"&gt
+		&ltpre&gt
+#include "library.h"
+#include <cstdio>
 
-int main() { 
-    printf("Hello, world!");
-    return 0;
-}</pre>
-        <pre>
-#include &lt;stdio.h&gt;
+int
+main()
+{
+    FoxString string, copy;
 
-int main() { 
-    printf("Hello, world!");
-    return 0;
-}</pre>
-        <pre>
-#include &lt;stdio.h&gt;
+    string.New((char*)"I am going to be mutable FoxString");
 
-int main() { 
-    printf("Hello, world!");
-    return 0;
-}</pre>
-        <pre>
-#include &lt;stdio.h&gt;
+    printf("\n%s\n", string.data);
 
-int main() { 
-    printf("Hello, world!");
+    string.ReCreate((char*)"I am better version of C++ string");
+
+    printf("New string: %s\nSize is: %d\n", string.data, string.size);
+
+    printf("\nTaking input: ");
+    printf("Your input is: %s\n", FoxStringInput().data);
+
+    string.Replace((char*) " ",(char*) "                    ", NO_LIMIT);
+
+    printf("\nAfter .Replace\n%s\nSize is: %d", string.data, string.size);
+
+    copy = string.Copy();
+
+    string.Clean();
+
+    printf("\n\nNew freshly copied FoxString:\n%s", copy.data);
+
     return 0;
-}</pre>
+}
+&ltpre&gt
+	&ltdiv&gt
+</pre>
+	<div style="padding-bottom: 15px;"></div>
+	<p>For adding code use 'code' or 'pre' tag, I recommend to use 'pre' tag</p>
+
+	<div style="padding-bottom: 45px;"></div>
+	<h2 id="contact">Contact</h2>
+	<h3 class="center">My name is FireTheFox 👋</h3>
+	<h3 class="center">Click on my profile picture to see my github profile</h3>
+	<center><a href="https://github.com/Fire-The-Fox"><img width="256" src="https://avatars.githubusercontent.com/u/64907994" alt="My github profile picture"></a></center>
     </div>
     <script src="js/framework.js"></script>
 </body>
